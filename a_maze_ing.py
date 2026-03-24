@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-from config_parser import ParserError, load_config
+from config_parser import ParserError, MazeConfig, load_config
 
 
 def main() -> None:
     try:
-        load_config()
+        config: MazeConfig = load_config()
+        # this was just to test if the instance was coming through
+        print(config.width)
     except ParserError as e:
         print(f"Error detected: {e}")
 

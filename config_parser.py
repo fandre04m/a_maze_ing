@@ -17,17 +17,7 @@ class ValidatorError(ParserError):
 
 
 class MazeConfig:
-    """
-    Represents a validated maze configuration.
-
-    Attributes:
-        width: Maze width.
-        height: Maze height.
-        entry: Entry coordinates (x, y).
-        exit: Exit coordinates (x, y).
-        output: Output file name.
-        perfect: Whether the maze is perfect.
-    """
+    """Represents a validated maze configuration."""
     def __init__(
         self,
         config: Dict[str, Union[str, int, bool, tuple[int, int]]]
